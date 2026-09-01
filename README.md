@@ -1,20 +1,34 @@
+# scRNA-seq Analysis Project
 
-# scRNA Project
-
-A structured learning project for single-cell RNA sequencing (scRNA-seq)
-analysis using Python and Scanpy.
+A structured computational biology project for learning and applying Python, Scanpy, and single-cell RNA-seq analysis.
 
 ## Project Overview
 
-This project documents my step-by-step learning process in Python and
-single-cell RNA-seq analysis.
+This project demonstrates a reproducible single-cell RNA-seq analysis workflow using the PBMC3k dataset.
 
-The first phase focuses on learning Python fundamentals and applying them
-directly to the PBMC3k single-cell RNA-seq dataset.
+The first phase focuses on building practical skills in Python, AnnData, Scanpy, quality control, dimensionality reduction, clustering, marker-gene analysis, and cell-type annotation.
 
-## Current Progress
+The project is designed as a skill-demonstration and portfolio project, rather than a novel biological discovery study.
 
-Lessons completed:
+## Phase 1 — PBMC3k
+
+### Completed Workflow
+
+Raw PBMC3k
+→ Quality Control
+→ Cell Filtering
+→ Normalization
+→ Log Transformation
+→ Highly Variable Gene Selection
+→ Scaling
+→ PCA
+→ Neighbors
+→ UMAP
+→ Leiden Clustering
+→ Marker Gene Analysis
+→ Cell-type Annotation
+
+### Completed Lessons
 
 - Lesson 01 — Python environment and variables
 - Lesson 02 — Lists and dictionaries
@@ -26,25 +40,38 @@ Lessons completed:
 - Lesson 08 — Matplotlib basics
 - Lesson 09 — Quality control with Scanpy
 - Lesson 10 — File paths, saving and loading AnnData
+- Lesson 11 — Git and GitHub project setup
+- Lesson 12 — Normalization, HVG selection, PCA and UMAP
+- Lesson 13 — Leiden clustering and marker-gene analysis
+- Lesson 14 — Cell-type annotation and PBMC3k pipeline finalization
+
+## Cell-type Annotation
+
+Cell identities were assigned based on Leiden clusters, ranked marker genes, and canonical marker-gene expression.
+
+The final annotation includes:
+
+- T cell
+- Cytotoxic T / NK-like
+- B cell
+- NK cell
+- Classical Monocyte
+- Dendritic cell
+- Platelet / Megakaryocyte
 
 ## Repository Structure
 
-```text
 scRNA_project/
 ├── datasets/
-│   └── pbmc3k_filtered.h5ad
 ├── notebooks/
-│   ├── lesson01_python.ipynb
-│   ├── lesson02_annData_intro.ipynb
-│   ├── Lesson02_List_and_Dictionary.ipynb
-│   ├── Lesson03_Loop_and_Condition.ipynb
-│   ├── Lesson04_Function.ipynb
-│   ├── Lesson05_Object.ipynb
-│   ├── Lesson06_NumPy.ipynb
-│   ├── Lesson07_Pandas.ipynb
-│   ├── Lesson08_Matplotlib.ipynb
-│   ├── Lesson09_Quality_Control_in_Scanpy.ipynb
-│   └── Lesson10_File_Paths_and_Save_or_Load.ipynb
 ├── .gitignore
 ├── requirements.txt
 └── README.md
+
+Large .h5ad files are kept locally in the datasets directory and excluded from Git tracking.
+
+## Next Phase
+
+The next stage of the project will apply the learned single-cell RNA-seq workflow to a real colorectal cancer dataset (GSE132465).
+
+A separate R-based analysis track will also be developed for TCGA-COAD transcriptomics and statistical analysis.
